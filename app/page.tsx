@@ -10,7 +10,7 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 import { AnimatedBackground } from "@/components/animated-background"
 import { RoleCard } from "@/components/role-card"
 import { RoleLoginModal } from "@/components/auth/role-login-modal"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "@/lib/translations"
 import type { UserRole } from "@/lib/types"
 
 export default function HomePage() {
