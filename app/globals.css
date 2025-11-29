@@ -203,6 +203,21 @@
     background: linear-gradient(135deg, #0b5ed7 0%, #0cc7bd 50%, #10b981 100%);
   }
 
+  /* Added animate-gradient keyframe animation for hero title */
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    animation: gradient 6s ease infinite;
+  }
+
   @keyframes shimmer {
     0% {
       background-position: -200% 0;

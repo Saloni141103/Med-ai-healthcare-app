@@ -117,28 +117,37 @@ export function EmergencyListener() {
         </DialogContent>
       </Dialog>
 
-      {/* Emergency Listener Pill */}
       {!showConsent && (
         <div className="fixed bottom-6 left-6 z-50">
-          <div className="glass-card p-3 flex items-center gap-3 rounded-full shadow-lg">
-            <div className="flex items-center gap-2">
+          <div className="bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-300 p-4 flex items-center gap-3 rounded-full shadow-2xl shadow-red-500/30">
+            <div className="flex items-center gap-3">
               {isEnabled && (
                 <div className="flex items-center gap-1">
                   {[0, 1, 2].map((i) => (
                     <div
                       key={i}
-                      className="w-1 bg-red-500 rounded-full animate-pulse"
+                      className="w-1.5 bg-red-600 rounded-full animate-pulse"
                       style={{
-                        height: `${Math.random() * 16 + 8}px`,
+                        height: `${Math.random() * 20 + 10}px`,
                         animationDelay: `${i * 0.15}s`,
                       }}
                     />
                   ))}
                 </div>
               )}
-              <span className="text-sm font-medium">Emergency listening: {isEnabled ? "ON" : "OFF"}</span>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🔴</span>
+                <span className="text-sm font-semibold text-red-900">
+                  Emergency listening: <span className="uppercase tracking-wide">{isEnabled ? "ON" : "OFF"}</span>
+                </span>
+              </div>
             </div>
-            <Button size="sm" variant={isEnabled ? "destructive" : "default"} onClick={toggleListener}>
+            <Button
+              size="sm"
+              variant={isEnabled ? "destructive" : "default"}
+              onClick={toggleListener}
+              className="shadow-lg font-semibold"
+            >
               {isEnabled ? "Disable" : "Enable"}
             </Button>
           </div>
