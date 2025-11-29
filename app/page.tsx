@@ -7,10 +7,12 @@ import { User, Stethoscope, Building2, Shield, Clock, Brain } from "lucide-react
 import { Button } from "@/components/ui/button"
 import { EmergencyListener } from "@/components/emergency-listener"
 import { LanguageSwitcher } from "@/components/language-switcher"
-import { AnimatedBackground } from "@/components/animated-background"
 import { RoleCard } from "@/components/role-card"
 import { RoleLoginModal } from "@/components/auth/role-login-modal"
 import { useTranslation } from "@/lib/translations"
+import { MedAILogo } from "@/components/med-ai-logo"
+import { MedAILogoBackground } from "@/components/med-ai-logo-background"
+import { MedicalTitleDecoration } from "@/components/medical-title-decoration"
 import type { UserRole } from "@/lib/types"
 
 export default function HomePage() {
@@ -23,8 +25,8 @@ export default function HomePage() {
   }
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      <AnimatedBackground />
+    <main className="min-h-screen relative overflow-hidden bg-white">
+      <MedAILogoBackground />
 
       <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -37,9 +39,7 @@ export default function HomePage() {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
-          <div className="w-14 h-14 bg-gradient-to-br from-blue-600 via-blue-500 to-teal-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-xl shadow-blue-500/30">
-            M
-          </div>
+          <MedAILogo />
           <div className="flex flex-col">
             <span className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-teal-500 bg-clip-text text-transparent">
               Med.AI
@@ -58,29 +58,34 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-12 space-y-6 max-w-5xl"
+          className="text-center mb-12 space-y-6 max-w-5xl relative"
         >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Brain className="w-4 h-4" />
-            <span>AI-Powered Healthcare Platform</span>
-          </motion.div>
+          <MedicalTitleDecoration />
 
           <motion.h1
-            className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-balance leading-tight"
+            className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-balance leading-tight relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-blue-600 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+            <span
+              className="text-white drop-shadow-[0_2px_8px_rgba(11,94,215,0.6)]"
+              style={{
+                textShadow:
+                  "2px 2px 4px rgba(11,94,215,0.3), -1px -1px 2px rgba(12,199,189,0.2), 0 0 40px rgba(11,94,215,0.2)",
+              }}
+            >
               Med.AI
             </span>
             <br />
-            <span className="text-gray-800 text-5xl md:text-6xl lg:text-7xl">Intelligent Healthcare</span>
+            <span
+              className="text-gray-700 text-5xl md:text-6xl lg:text-7xl"
+              style={{
+                textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+              }}
+            >
+              Intelligent Healthcare
+            </span>
           </motion.h1>
 
           <motion.p

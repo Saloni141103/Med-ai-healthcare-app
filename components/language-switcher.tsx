@@ -1,29 +1,23 @@
 "use client"
 
-import { useState } from "react"
-import { useTranslation } from "react-i18next"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { useTranslation } from "@/lib/translations"
 
 const LANGUAGES = [
   { code: "en", name: "English", flag: "🇬🇧" },
   { code: "hi", name: "हिंदी", flag: "🇮🇳" },
   { code: "mr", name: "मराठी", flag: "🇮🇳" },
-  { code: "ta", name: "தமிழ்", flag: "🇮🇳" },
-  { code: "gu", name: "ગુજરાતી", flag: "🇮🇳" },
-  { code: "bn", name: "বাংলা", flag: "🇮🇳" },
 ]
 
 export function LanguageSwitcher() {
-  const { i18n } = useTranslation()
-  const [currentLang, setCurrentLang] = useState(i18n.language || "en")
+  const { language, setLanguage } = useTranslation()
 
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang)
-    setCurrentLang(lang)
+  const changeLanguage = (lang: "en" | "hi" | "mr") => {
+    setLanguage(lang)
   }
 
-  const currentLanguage = LANGUAGES.find((l) => l.code === currentLang) || LANGUAGES[0]
+  const currentLanguage = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0]
 
   return (
     <DropdownMenu>
@@ -35,10 +29,14 @@ export function LanguageSwitcher() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {LANGUAGES.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code)} className="gap-2">
+          <DropdownMenuItem
+            key={lang.code}
+            onClick={() => changeLanguage(lang.code as "en" | "hi" | "mr")}
+            className="gap-2"
+          >
             <span>{lang.flag}</span>
             <span>{lang.name}</span>
-            {currentLang === lang.code && <span className="ml-auto">✓</span>}
+            {language === lang.code && <span className="ml-auto">✓</span>}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
