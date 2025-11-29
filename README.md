@@ -1,4 +1,4 @@
-# Med.AI - Intelligent Healthcare Assistant
+<img width="1890" height="919" alt="image" src="https://github.com/user-attachments/assets/caab0ba2-11dc-4ce3-88a6-13bf829aee2d" /># Med.AI - Intelligent Healthcare Assistant
 
 A comprehensive, modern, responsive frontend-only React application for healthcare management with AI-powered features, role-based dashboards, emergency response capabilities, and multi-language support.
 
@@ -18,6 +18,8 @@ A comprehensive, modern, responsive frontend-only React application for healthca
 - **Login & Signup**: Role-based authentication for Patients, Doctors, and Hospital Staff
 - **Demo Credentials**: Use any role with email `john.doe@example.com` and password `demo123`
 - **Role-Specific Registration**: Specialized signup forms with relevant fields for each role
+- ![WhatsApp Image 2025-11-29 at 11 13 47_b4cd4735](https://github.com/user-attachments/assets/94bdb85e-416f-4140-977f-3278e64f1846)
+
 
 ### Patient Dashboard
 - **AI Symptom Checker**: Interactive chat interface with:
@@ -26,6 +28,8 @@ A comprehensive, modern, responsive frontend-only React application for healthca
   - Patient information panel (age, gender, conditions, medications, allergies)
   - AI clarifying questions
   - Real-time typing indicators
+  - <img width="1862" height="927" alt="image" src="https://github.com/user-attachments/assets/eb4aa47b-13ed-4324-a155-ea4a3c2df47c" />
+
 - **AI Result Page**: Comprehensive analysis including:
   - Animated triage meter with urgency levels (0-3)
   - Condition cards with probability scores and confidence levels
@@ -34,6 +38,9 @@ A comprehensive, modern, responsive frontend-only React application for healthca
   - When to seek help guidelines
   - Doctor carousel with filters (specialization, fee range)
   - Care escalation path visualization
+  - ![WhatsApp Image 2025-11-29 at 11 51 20_f191581f](https://github.com/user-attachments/assets/7cd97f90-3a76-4bbd-b9bf-287f184ea393)
+  - ![WhatsApp Image 2025-11-29 at 11 51 47_35624e9d](https://github.com/user-attachments/assets/85460ca6-e33d-4e7b-92bd-ee792481c622)
+
 - **Emergency Page**: Panic-proof UI with:
   - Large tappable action buttons (Call 108, Notify Hospital, Share Location)
   - Auto-escalation timer with countdown
@@ -41,15 +48,21 @@ A comprehensive, modern, responsive frontend-only React application for healthca
   - Authenticity confidence meter with detailed scoring
   - Hospital notification payload preview
   - Real-time response tracking with timeline
+  - ![WhatsApp Image 2025-11-29 at 11 13 47_d002d0ea](https://github.com/user-attachments/assets/bb5777bf-a517-462c-9323-2812e2e8f223)
+
 - **Health Overview**: Quick stats on health status, appointments, and records
 - **Appointment Management**: Book, view, and manage consultations
 - **Medical Records**: Upload, view, and organize documents
+- <img width="1802" height="923" alt="image" src="https://github.com/user-attachments/assets/c8561096-f620-437a-8f7f-5b658a620102" />
+- <img width="1656" height="824" alt="image" src="https://github.com/user-attachments/assets/2ad88751-5295-43ed-872e-eceb376187dc" />
 
 ### Doctor Dashboard
 - **Patient Management**: Browse patient list with urgency indicators
 - **Appointments**: Schedule management and calendar view
 - **Case Details Modal**: Access complete patient history and prescriptions
 - **Clinical Notes**: Add detailed notes and prescriptions
+- <img width="1822" height="918" alt="image" src="https://github.com/user-attachments/assets/25f3a77c-be32-4386-9f32-c0b8f4504517" />
+
 
 ### Hospital Staff Dashboard
 - **Hospital Statistics**: Overview of patients, discharges, and alerts
@@ -64,6 +77,7 @@ A comprehensive, modern, responsive frontend-only React application for healthca
 - Bottom-left pill showing listener status
 - Real-time audio level visualization
 - Automatic emergency pre-triage modal
+-<img width="1814" height="920" alt="image" src="https://github.com/user-attachments/assets/55f0dbea-2eef-4395-afd9-8a9a17964150" />
 
 **Wake Words:**
 - English: "MedAI", "Med.AI", "Med AI", "Hey MedAI"
@@ -83,6 +97,11 @@ A comprehensive, modern, responsive frontend-only React application for healthca
 - MEDIUM: Pre-triage questions then escalate
 - LOW: Guidance with manual escalate option
 - Silent escalation after 7-10 seconds of no response
+- <img width="1874" height="898" alt="image" src="https://github.com/user-attachments/assets/a4368964-fe82-42ba-b746-0b7c9dec11b7" />
+
+- -<img width="1826" height="924" alt="image" src="https://github.com/user-attachments/assets/e30850e6-a0e5-479f-a828-cb38cca9a527" />
+
+-<img width="1792" height="885" alt="image" src="https://github.com/user-attachments/assets/88eb15b2-e42c-4766-a095-0d6c6fa1aecc" />
 
 ## Pages & Routes
 
